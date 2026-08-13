@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" rx="14" fill="#0d1117"/>
+  <rect width="960" height="48" rx="14" fill="#161b22"/>
+  <circle cx="28" cy="24" r="7" fill="#ff5f56"/><circle cx="52" cy="24" r="7" fill="#ffbd2e"/><circle cx="76" cy="24" r="7" fill="#27c93f"/>
+  <text x="480" y="30" text-anchor="middle" font-family="Segoe UI,Arial" font-size="15" fill="#8b949e">security-log-analyzer — terminal</text>
+  <g font-family="Consolas,Menlo,monospace" font-size="19" fill="#c9d1d9">
+    <text x="34" y="88" fill="#58a6ff">$ python analisador.py</text>
+    <text x="34" y="132" fill="#f0f6fc" font-weight="700">RESUMO DA ANÁLISE</text>
+    <text x="34" y="166">Logins com sucesso: <tspan fill="#3fb950">3</tspan></text>
+    <text x="34" y="198">Logins com falha: <tspan fill="#f85149">6</tspan></text>
+    <text x="34" y="250" fill="#f0f6fc" font-weight="700">FALHAS POR IP</text>
+    <text x="34" y="284">192.168.1.25: <tspan fill="#f85149">4 falhas</tspan></text>
+    <text x="34" y="316">192.168.1.40: <tspan fill="#d29922">2 falhas</tspan></text>
+    <text x="34" y="368" fill="#f0f6fc" font-weight="700">ANÁLISE POR TEMPO</text>
+    <text x="34" y="402">IP: <tspan fill="#79c0ff">192.168.1.25</tspan></text>
+    <rect x="24" y="426" width="912" height="58" rx="8" fill="#3d1f24" stroke="#f85149"/>
+    <text x="44" y="462" fill="#ff7b72" font-weight="700">ALERTA: 3 falhas em 15.0 segundos</text>
+  </g>
+</svg>
