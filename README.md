@@ -6,6 +6,7 @@ Analisador de logs de autenticação desenvolvido em Python para identificar pad
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Log_Analysis-0F766E?style=for-the-badge&logo=securityscorecard&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-6_passing-22C55E?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Funcional-22C55E?style=for-the-badge)
 
 </div>
@@ -22,12 +23,17 @@ O programa processa eventos de autenticação, contabiliza sucessos e falhas por
 - Agrupamento de falhas por endereço IP
 - Detecção temporal de possível ataque de força bruta
 - Tratamento de linhas vazias, incompletas e datas inválidas
+- Funções separadas para leitura, análise e apresentação
+- Seis testes automatizados com `unittest`
 
 ## Estrutura
 
 ```text
 security-log-analyzer/
 ├── analisador.py
+├── test_analisador.py
+├── docs/
+│   └── demonstracao-terminal.svg
 ├── logs/
 │   └── exemplo.log
 └── README.md
@@ -47,6 +53,14 @@ Eventos reconhecidos: `LOGIN_SUCESSO` e `LOGIN_FALHA`.
 python analisador.py
 ```
 
+## Como executar os testes
+
+```powershell
+python -m unittest -v
+```
+
+Os testes verificam interpretação de registros, linhas incompletas, datas inválidas, contagens por IP e alertas dentro ou fora da janela de tempo.
+
 ## Demonstração visual
 
 > Saída real validada, apresentada em um terminal limpo para não expor caminhos ou dados pessoais.
@@ -60,7 +74,7 @@ RESUMO DA ANÁLISE
 Logins com sucesso: 3
 Logins com falha: 6
 
-Falhas Por IP
+FALHAS POR IP
 192.168.1.25: 4 falhas
 192.168.1.40: 2 falhas
 
@@ -71,15 +85,15 @@ ALERTA: 3 falhas em 15.0 segundos
 
 ## Conceitos aplicados
 
-`Python` · `Pathlib` · `Datetime` · `Arquivos` · `Listas` · `Dicionários` · `Tratamento de exceções` · `Segurança da Informação`
+`Python` · `Pathlib` · `Datetime` · `Funções` · `Arquivos` · `Listas` · `Dicionários` · `Tratamento de exceções` · `Unittest` · `Segurança da Informação`
 
 ## Próximas melhorias
 
 - Receber o caminho do log pela linha de comando
 - Exportar alertas em JSON ou CSV
-- Adicionar testes automatizados
 - Validar endereços IP
 
 ---
 
 Desenvolvido por [Nicolas Marques](https://github.com/NicolasMarquesSousa).
+
