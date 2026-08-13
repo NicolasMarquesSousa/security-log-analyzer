@@ -47,6 +47,12 @@ Eventos reconhecidos: `LOGIN_SUCESSO` e `LOGIN_FALHA`.
 python analisador.py
 ```
 
+## Demonstração visual
+
+> Saída real validada, apresentada em um terminal limpo para não expor caminhos ou dados pessoais.
+
+![Demonstração do Security Log Analyzer](docs/demonstracao-terminal.svg)
+
 ## Exemplo de saída
 
 ```text
